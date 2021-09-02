@@ -11,7 +11,7 @@
 
 class Account {
 public:
-    Account (std :: string name) : ownerFullName(std::move(name)){}
+    explicit Account (std :: string name) : ownerFullName(std::move(name)){}
     static int getBalance (); //returns the balance from the file as an int
     static void setBalance (int value);
     void updateHistory(int mode, int value = 0); //changes the history of the file
