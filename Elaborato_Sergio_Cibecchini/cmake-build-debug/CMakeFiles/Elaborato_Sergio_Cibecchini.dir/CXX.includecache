@@ -528,7 +528,7 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/Account.h
+/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/Account.h
 iostream
 -
 fstream
@@ -536,7 +536,7 @@ fstream
 utility
 -
 
-/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/Interface.h
+/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/Interface.h
 iostream
 -
 exception
@@ -550,21 +550,13 @@ fstream
 memory
 -
 Account.h
-/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/Account.h
+/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/Account.h
 
-/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/testAccount.cpp
-gtest/gtest.h
--
-gmock/gmock.h
--
-Account.h
-/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/Account.h
-
-/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/testInterface.cpp
+/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/main.cpp
 gtest/gtest.h
 -
 gmock/gmock.h
 -
 Interface.h
-/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/Interface.h
+/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/Interface.h
 

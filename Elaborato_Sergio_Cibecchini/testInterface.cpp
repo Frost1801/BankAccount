@@ -18,6 +18,7 @@ public:
 
 };
 }
+/*
 
 TEST_F (InterfaceTester, intInput){ //checks basic int input using getIntInput
     int value;
@@ -33,3 +34,4 @@ TEST_F (InterfaceTester, stringInput){ //checks basic string input using getStri
     ASSERT_EQ("hello",inputString);
 }
 
+*/

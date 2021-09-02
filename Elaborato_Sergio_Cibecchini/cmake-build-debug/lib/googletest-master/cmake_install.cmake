@@ -1,4 +1,4 @@
-# Install script for directory: /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/lib/googletest-master
+# Install script for directory: /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/lib/googletest-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug/lib/googletest-master/googlemock/cmake_install.cmake")
+  include("/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug/lib/googletest-master/googlemock/cmake_install.cmake")
 
 endif()
 

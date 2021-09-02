@@ -65,6 +65,8 @@ bool Interface::startInterface() { //user interface to access all the account's 
             }
             case 0 : { // quits the program
                 std:: cout << "Quitting..." << std:: endl;
+                account ->clearFile("history.txt");
+                account ->clearFile("balance.txt");
                 return false;
             }
             default : {
@@ -81,8 +83,7 @@ void Interface ::createAccount() {
     std:: string inputName;
     while (!getStringInput(inputName, 5, 30)); //keeps asking for a username until a valid one is input
 
-    std:: unique_ptr<Account> owner = std::make_unique<Account>(Account (inputName)); //creates a bank account with associated Username
-    this ->account.swap(owner); //gives a pointer to the managed account
+    account = std::make_unique<Account>(inputName);
 
     std:: cout << "Chosen Username: " << account->getOwnerFullName() << std:: endl;
     account ->setBalance(0);

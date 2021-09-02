@@ -57,10 +57,10 @@ RM = /snap/clion/163/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini
+CMAKE_SOURCE_DIR = /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug/CMakeFiles /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug/lib/googletest-master//CMakeFiles/progress.marks
-	cd /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug/CMakeFiles 0
+	cd /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug/CMakeFiles /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug/lib/googletest-master//CMakeFiles/progress.marks
+	cd /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/clean
+	cd /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,17 +148,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
+	cd /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
+	cd /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/googletest-master/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -184,6 +184,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sergio/CLionProjects/COMPITI_PROGRAMMAZIONE/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
