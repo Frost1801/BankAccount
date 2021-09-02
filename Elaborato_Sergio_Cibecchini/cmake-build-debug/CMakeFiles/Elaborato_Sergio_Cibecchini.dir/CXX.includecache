@@ -560,3 +560,11 @@ gmock/gmock.h
 Interface.h
 /home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/Interface.h
 
+/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/testInterface.cpp
+gtest/gtest.h
+-
+gmock/gmock.h
+-
+Interface.h
+/home/sergio/BankAccount/Elaborato_Sergio_Cibecchini/Interface.h
+

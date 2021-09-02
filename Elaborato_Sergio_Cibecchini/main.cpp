@@ -6,16 +6,16 @@
 #include "Interface.h"
 
 int main() {
-/*
+
 
     testing :: InitGoogleTest();
     return RUN_ALL_TESTS();
-*/
 
 
-    Interface test;
+
+ /*   Interface test;
     while (test.startInterface());
     return 0;
-
+*/
 
 }
