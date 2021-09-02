@@ -5,7 +5,7 @@
 #include "Account.h"
 
 
-void Account ::deposit(int depositValue) {
+void Account ::deposit(int depositValue) { //deposit function
     //saves previous file balance
     int previousBalance = getBalance();
 
@@ -14,23 +14,37 @@ void Account ::deposit(int depositValue) {
     std:: ofstream balanceOut;
     clearFile("balance.txt");
 
-    //apre il file e cambia il valore
+    //opens file and changes value stored inside
     balanceOut.open("balance.txt");
     int total = previousBalance + depositValue;
     balanceOut << std:: to_string(total);
+    //updates history file with the changes
     updateHistory(1,depositValue);
 }
 
+bool Account::withdraw(int withdrawValue) {
+//saves previous file balance
+    int previousBalance = getBalance();
+    if (withdrawValue <= previousBalance){ //checks if we have enough funds to withdraw
+        //deletes previous file contents
+        std:: ofstream balanceOut;
+        clearFile("balance.txt");
 
-int Account ::getBalance() { //returns the balance
-    std:: ifstream balanceIn ("balance.txt");
-    std::  string out;
-    getline(balanceIn, out);
-    int convInt = std:: stoi(out);
-    return convInt;
+        //apre il file e cambia il valore
+        balanceOut.open("balance.txt");
+        int total = previousBalance - withdrawValue;
+        balanceOut << std:: to_string(total);
+        updateHistory(2, withdrawValue);
+        return true;
+    }
+    else {
+        std::cout << "Error, exceeding account balance (" <<  std:: to_string(getBalance()) << "$)"<< std:: endl;
+        return false;
+    }
 }
 
-void Account ::updateHistory( int mode, int value) {
+void Account ::updateHistory( int mode, int value) { //updates transaction history file
+
     std:: ofstream history ("history.txt", std:: ios_base :: app); //opens the file in append mode
     //changes the update basing on the mode
     if (mode == 1 && value > 0){
@@ -54,36 +68,23 @@ void Account ::setBalance(int value) { //sets balance
     balanceOut << std::to_string(value);
 }
 
-bool Account::withdraw(int withdrawValue) {
-//saves previous file balance
-    int previousBalance = getBalance();
-    if (withdrawValue <= previousBalance){
-        //deletes previous file contents
-        std:: ofstream balanceOut;
-        clearFile("balance.txt");
-
-        //apre il file e cambia il valore
-        balanceOut.open("balance.txt");
-        int total = previousBalance - withdrawValue;
-        balanceOut << std:: to_string(total);
-        updateHistory(2, withdrawValue);
-        return true;
-    }
-    else {
-        std::cout << "Error, exceeding account balance (" <<  std:: to_string(getBalance()) << "$)"<< std:: endl;
-        return false;
-    }
-
-
+int Account ::getBalance() { //returns the balance
+    std:: ifstream balanceIn ("balance.txt");
+    std::  string out;
+    //grabs first string of the balance file
+    getline(balanceIn, out);
+    //converts string to int
+    int convInt = std:: stoi(out);
+    return convInt;
 }
 
-const std::string &Account::getOwnerFullName() const {
+const std::string &Account::getOwnerFullName() const { //getter
     return ownerFullName;
 }
 
-void Account::clearFile(const std::string &fileName) {
+void Account::clearFile(const std::string &fileName) { //clears the contents of a file named fileName
     std:: ofstream toClear;
-    toClear.open(fileName, std:: fstream::out | std:: fstream::trunc);
+    toClear.open(fileName, std:: fstream::out | std:: fstream::trunc); //trunc deletes any contents that existed in the file before it is open
     toClear.close();
 }
 

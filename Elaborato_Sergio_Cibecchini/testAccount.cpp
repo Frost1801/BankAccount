@@ -54,7 +54,7 @@ TEST_F (AccountTester, withdrawReturnFalse){ //checks return value in the case o
     ASSERT_EQ(false, testedAccount -> withdraw (101));
 }
 
-TEST_F (AccountTester, checkHistory){
+TEST_F (AccountTester, checkHistory){ //checks if history is updated correctly
     testedAccount ->clearFile("history.txt");
     testedAccount ->deposit(100);
     std::ifstream history ("history.txt");
