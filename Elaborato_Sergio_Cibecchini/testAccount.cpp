@@ -17,7 +17,7 @@ namespace {
         void SetUp () override{
             testedAccount->setBalance(0);
         }
-        void TearDown (){
+        void TearDown () override{
             testedAccount ->clearFile("history.txt");
             testedAccount ->clearFile("balance.txt");
         }

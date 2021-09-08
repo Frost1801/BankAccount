@@ -46,7 +46,7 @@ bool Account::withdraw(int withdrawValue) {
 void Account ::updateHistory( int mode, int value) { //updates transaction history file
 
     std:: ofstream history ("history.txt", std:: ios_base :: app); //opens the file in append mode
-    //changes the update basing on the mode
+    //changes the update basing on the selected mode
     if (mode == 1 && value > 0){
         history << (ownerFullName + " deposited " + std::to_string(value) + "$ ") << std:: endl ;
     }

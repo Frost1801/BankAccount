@@ -132,11 +132,8 @@ bool Interface ::getIntInput(int &input, int maxVal, int minVal) {//takes an int
     return true;
 }
 
-void Interface ::clear() {
-    //std:: cin.get();
-    //fflush(stdin);
+void Interface ::clear() { //clears input buffer, used in getIntInput
     std:: cin.clear();
-    //std:: cin.ignore(10000, '\n');
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 

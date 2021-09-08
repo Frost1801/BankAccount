@@ -25,7 +25,7 @@ public:
 
     //input methods
     static bool getStringInput (std:: string & input, int minLength = 0, int maxLength = 100);
-    static bool getIntInput (int &input, int maxVal = 100000, int minVal = 0);
+    static bool getIntInput (int &input, int maxVal = 100000000, int minVal = 0);
     static void clear ();
 
 private:
