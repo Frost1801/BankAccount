@@ -12,7 +12,7 @@
 #include <memory>
 #include "Account.h"
 
-class Interface {
+class Interface { //interface for the account operations
 public:
 
     bool startInterface ();

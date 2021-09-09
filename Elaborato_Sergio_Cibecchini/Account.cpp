@@ -4,6 +4,9 @@
 
 #include "Account.h"
 
+const int DEPOSIT = 1;
+const int WITHDRAW = 2;
+const int CREATEACCOUNT = 3;
 
 void Account ::deposit(int depositValue) { //deposit function
     //saves previous file balance
@@ -19,7 +22,7 @@ void Account ::deposit(int depositValue) { //deposit function
     int total = previousBalance + depositValue;
     balanceOut << std:: to_string(total);
     //updates history file with the changes
-    updateHistory(1,depositValue);
+    updateHistory(DEPOSIT,depositValue);
 }
 
 bool Account::withdraw(int withdrawValue) {
@@ -34,7 +37,7 @@ bool Account::withdraw(int withdrawValue) {
         balanceOut.open("balance.txt");
         int total = previousBalance - withdrawValue;
         balanceOut << std:: to_string(total);
-        updateHistory(2, withdrawValue);
+        updateHistory(WITHDRAW, withdrawValue);
         return true;
     }
     else {
@@ -47,13 +50,13 @@ void Account ::updateHistory( int mode, int value) { //updates transaction histo
 
     std:: ofstream history ("history.txt", std:: ios_base :: app); //opens the file in append mode
     //changes the update basing on the selected mode
-    if (mode == 1 && value > 0){
+    if (mode == DEPOSIT && value > 0){
         history << (ownerFullName + " deposited " + std::to_string(value) + "$ ") << std:: endl ;
     }
-    else if (mode == 2 && value > 0){
+    else if (mode == WITHDRAW && value > 0){
         history << (ownerFullName + " withdrawn " + std::to_string(value) + "$ ") << std:: endl;
     }
-    else if (mode == 3){
+    else if (mode == CREATEACCOUNT){
         history << ownerFullName+ " created an account" << std:: endl;
     }
 }
@@ -88,9 +91,7 @@ void Account::clearFile(const std::string &fileName) { //clears the contents of 
     toClear.close();
 }
 
-void Account::setOwnerFullName(const std::string &ownerFullName) {
-    Account::ownerFullName = ownerFullName;
-}
+
 
 
 
