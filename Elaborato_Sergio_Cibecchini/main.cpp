@@ -12,7 +12,7 @@ int main() {
     return RUN_ALL_TESTS();
 
 
-
+//Uncomment this lines to run the program
  /*   Interface test;
     while (test.startInterface());
     return 0;
